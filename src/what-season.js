@@ -12,8 +12,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
  function getSeason(date = null) {
-  const errPhrase = 'Unable to determine the time of year!';
-  if (date === null) return errPhrase;
+  const errStr = 'Unable to determine the time of year!';
+  if (date === null) return errStr;
   if (!(date instanceof Date)) throw new Error('Invalid date!');
   try {
     date.getTimezoneOffset();
